@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphy Adventure - Books</title>
-    <link rel="stylesheet" href="alphystyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphy Adventure - Books</title>
+  <link rel="stylesheet" href="alphystyle.css">
 </head>
 <body>
-    <header>
-        <h1>Alphy's Books</h1>
-        <p>Explore the fun books we've created!</p>
-    </header>
+  <header>
+    <h1>Alphy's Books</h1>
+    <p>Explore the fun books we've created!</p>
+  </header>
 
-    <main>
-        <section class="books-container">
-            <div class="book-card">
-                <img src="images/english-book.png" alt="English Book">
-                <h2>English</h2>
-                <p>Learn letters, words, and rhymes with Alphy!</p>
-            </div>
+  <main>
+    <section class="books-section" aria-labelledby="books-heading">
+      <h2 id="books-heading">Our Books</h2>
+      <p class="intro-text">Alphy’s books are full of fun learning adventures! Here are some examples:</p>
 
-            <div class="book-card">
-                <img src="images/math-book.png" alt="Math Book">
-                <h2>Math</h2>
-                <p>Counting, numbers, and fun math games for kids.</p>
-            </div>
+      <div class="book-grid">
+        <div class="book-card">
+          <img src="images/english-book.png" alt="English Book">
+          <h3>English</h3>
+          <p>Learn letters, words, and rhymes with Alphy!</p>
+          <a href="#" class="book-button">Read More</a>
+        </div>
 
-            <div class="book-card">
-                <img src="images/geography-book.png" alt="Geography Book">
-                <h2>Geography</h2>
-                <p>Explore countries, maps, and fun world facts.</p>
-            </div>
+        <div class="book-card">
+          <img src="images/math-book.png" alt="Math Book">
+          <h3>Math</h3>
+          <p>Counting, numbers, and fun math games for kids.</p>
+          <a href="#" class="book-button">Read More</a>
+        </div>
 
-            <!-- Add more book cards here as needed -->
-        </section>
-    </main>
+        <div class="book-card">
+          <img src="images/geography-book.png" alt="Geography Book">
+          <h3>Geography</h3>
+          <p>Explore countries, maps, and fun world facts.</p>
+          <a href="#" class="book-button">Read More</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
