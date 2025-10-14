@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Alphy</title>
+  <link rel="stylesheet" href="alphystyle.css">
+  <style>
+    /* Contact page specific styles */
+    body {
+      background: #fff8f0;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fffae6;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      font-size: 2.5rem;
+      color: #ff6f61;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    form label {
+      font-weight: bold;
+      font-size: 1rem;
+      align-self: flex-start;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.7rem;
+      border-radius: 10px;
+      border: 2px solid #ffd700;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus {
+      border-color: #ff9900;
+      box-shadow: 0 0 8px rgba(255,153,0,0.5);
+    }
+
+    form button {
+      background: linear-gradient(90deg, #ffb347, #ffcc33);
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255,153,0,0.5);
+    }
+
+    .fun-emoji {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      form input, form textarea {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <img src="Alphy.jpg" alt="Smiling Alphy the monkey">
+    </div>
+    <h1>Say Hello to Alphy! <span class="fun-emoji">🐵💌</span></h1>
+    <p>We love hearing from curious kids and awesome parents!</p>
+  </header>
+
+  <main>
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Contact Me</h1>
+      <p>Send a message, ask a question, or just share a smile 😊</p>
+
+      <form action="submit-form.php" method="POST" aria-describedby="form-instructions">
+        <p id="form-instructions">Fill out the form below and join Alphy’s adventure club!</p>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="e.g., Emma or John" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="e.g., parent@example.com" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write something fun!" required></textarea>
+
+        <button type="submit">Send Message ✉️</button>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Alphy’s Adventure. All rights reserved. <span class="fun-emoji">🐵🎉</span></p>
+  </footer>
+</body>
+</html>
 
