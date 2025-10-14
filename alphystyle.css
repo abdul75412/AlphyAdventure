@@ -145,3 +145,75 @@ footer {
   padding-top: 1rem;
   border-top: 1px solid #ccc;
 }
+.books-section {
+  padding: 60px 20px;
+  background-color: #fefbf6;
+  text-align: center;
+}
+
+.books-section h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.books-section .intro-text {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.book-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.book-card p {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-button {
+  display: inline-block;
+  background-color: #ffb347;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #ff9900;
+}
