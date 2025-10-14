@@ -1,0 +1,75 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alphy’s Adventure</title>
+  <meta name="description" content="Join Alphy the Explorer on magical journeys full of stories, sounds, and fun learning!" />
+  <link rel="stylesheet" href="alphystyle.css" />
+</head>
+<body>
+  <header role="banner">
+    <div class="banner">
+      <img src="Alphy.jpg" alt="Close-up of Alphy the explorer monkey smiling warmly" />
+    </div>
+    <h1>Welcome to Alphy’s Adventure!</h1>
+    <p>Stories, sounds, and smiles for curious kids everywhere.</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#about">About the Author</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main role="main">
+    <section id="books" aria-labelledby="books-heading">
+      <h2 id="books-heading">Explore Our Stories</h2>
+      <p>From jungle quests to alphabet adventures, Alphy’s books spark imagination and joy.</p>
+      <ul>
+        <li><strong>Alphy and the Jungle Quest</strong> – A treasure hunt with animal friends</li>
+        <li><strong>Alphy Learns to Share</strong> – A heartwarming tale about kindness</li>
+      </ul>
+    </section>
+
+    <section id="activities" aria-labelledby="activities-heading">
+      <h2 id="activities-heading">Play & Learn</h2>
+      <p>Download coloring pages, listen to story sounds, and try fun quizzes!</p>
+      <ul>
+        <li><a href="coloring.html">Coloring Pages</a></li>
+        <li><a href="sounds.html">Story Sounds</a></li>
+        <li><a href="quiz.html">Alphy’s Quiz</a></li>
+      </ul>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Meet the Author</h2>
+      <p>Hi! I’m Abdirizak, and I created Alphy to help kids learn through joy, storytelling, and imagination. Every book is crafted with love and cultural care.</p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Say Hello</h2>
+      <form action="submit-form.php" method="POST" aria-describedby="form-instructions">
+        <p id="form-instructions">Send us a message and join Alphy’s adventure club!</p>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Alphy’s Adventure. All rights reserved.</p>
+  </footer>
+</body>
+</html>
