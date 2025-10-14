@@ -68,7 +68,8 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   background-color: #90e0ef;
 }
 
@@ -145,6 +146,8 @@ footer {
   padding-top: 1rem;
   border-top: 1px solid #ccc;
 }
+
+/* Books section */
 .books-section {
   padding: 60px 20px;
   background-color: #fefbf6;
@@ -164,6 +167,7 @@ footer {
   color: #555;
 }
 
+/* Book grid */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -171,18 +175,21 @@ footer {
   justify-items: center;
 }
 
+/* Book card */
 .book-card {
   background: white;
   border-radius: 16px;
+  border: 2px solid #ffd700; /* gold border */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
   width: 90%;
   max-width: 280px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .book-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.25);
 }
 
 .book-card img {
@@ -203,6 +210,7 @@ footer {
   margin-bottom: 15px;
 }
 
+/* Book button */
 .book-button {
   display: inline-block;
   background-color: #ffb347;
