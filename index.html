@@ -1,76 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alphy’s Adventure</title>
-  <meta name="description" content="Join Alphy the Explorer on magical journeys full of stories, sounds, and fun learning!" />
-  <link rel="stylesheet" href="alphystyle.css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Alphy’s Adventure — Children’s Stories, Activities & Fun</title>
+  <meta name="description" content="Join Alphy the Explorer on magical journeys full of stories, sounds, and fun learning. Books, activities, and more for curious kids!" />
+
+  <!-- Canonical & social -->
+  <link rel="canonical" href="https://alphyadventure.com/">
+  <meta property="og:title" content="Alphy’s Adventure" />
+  <meta property="og:description" content="Join Alphy the Explorer on magical journeys full of stories, sounds, and fun learning!" />
+  <meta property="og:url" content="https://alphyadventure.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="alphystyle.css" />
+
+  <!-- Favicon (replace with your actual files if you have them) -->
+  <link rel="icon" href="/favicon.ico">
 </head>
 
 <body>
-  <!-- New storybook-style banner -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
   <header class="storybook-header" role="banner">
-    <div class="logo-box">
-      <h1>Alphy&nbsp;Dave</h1>
+    <div class="container">
+      <div class="brand">
+        <a class="logo-link" href="/" aria-label="Alphy’s Adventure home">
+          <span class="logo-text">Alphy’s Adventure</span>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#about">About the Author</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- If you have separate pages, keep these too -->
+          <!-- <li><a href="books.html">All Books</a></li> -->
+          <!-- <li><a href="contact.html">Contact Page</a></li> -->
+        </ul>
+      </nav>
     </div>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="#activities">Activities</a></li>
-        <li><a href="#about">About the Author</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main role="main">
-    <section id="books" aria-labelledby="books-heading">
-      <h2 id="books-heading">Explore Our Stories</h2>
-      <p>From jungle quests to alphabet adventures, Alphy’s books spark imagination and joy.</p>
-      <ul>
-        <li><strong>Alphy and the Jungle Quest</strong> – A treasure hunt with animal friends</li>
-        <li><strong>Alphy Learns to Share</strong> – A heartwarming tale about kindness</li>
-      </ul>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Discover, giggle, and learn with <span class="nowrap">Alphy the Explorer!</span></h1>
+      <p class="hero-subtitle">Storytime magic, printable fun, and gentle life lessons for little adventurers.</p>
+      <p class="hero-ctas">
+        <a class="btn btn-primary" href="#books">Explore Books</a>
+        <a class="btn btn-secondary" href="#activities">Play &amp; Learn</a>
+      </p>
+    </div>
+  </section>
+
+  <main id="main" role="main">
+    <!-- Books -->
+    <section id="books" aria-labelledby="books-heading" class="section">
+      <div class="container">
+        <h2 id="books-heading">Explore Our Stories</h2>
+        <p>From jungle quests to alphabet adventures, Alphy’s books spark imagination and joy.</p>
+
+        <ul class="card-grid">
+          <li class="card">
+            <div class="card-body">
+              <h3 class="card-title">Alphy and the Jungle Quest</h3>
+              <p class="card-text">A treasure hunt with animal friends and courage around every corner.</p>
+              <a class="btn btn-link" href="books.html#jungle-quest" aria-label="Read more about Alphy and the Jungle Quest">Read more</a>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card-body">
+              <h3 class="card-title">Alphy Learns to Share</h3>
+              <p class="card-text">A heartwarming tale about kindness and the joy of giving.</p>
+              <a class="btn btn-link" href="books.html#learns-to-share" aria-label="Read more about Alphy Learns to Share">Read more</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="activities" aria-labelledby="activities-heading">
-      <h2 id="activities-heading">Play & Learn</h2>
-      <p>Download coloring pages, listen to story sounds, and try fun quizzes!</p>
-      <ul>
-        <li><a href="coloring.html">Coloring Pages</a></li>
-        <li><a href="sounds.html">Story Sounds</a></li>
-        <li><a href="quiz.html">Alphy’s Quiz</a></li>
-      </ul>
+    <!-- Activities -->
+    <section id="activities" aria-labelledby="activities-heading" class="section alt">
+      <div class="container">
+        <h2 id="activities-heading">Play &amp; Learn</h2>
+        <p>Download coloring pages, listen to story sounds, and try fun quizzes!</p>
+
+        <ul class="feature-list">
+          <li>
+            <h3><a href="coloring.html">Coloring Pages</a></h3>
+            <p>Print-and-play sheets to bring Alphy’s world to life.</p>
+          </li>
+          <li>
+            <h3><a href="sounds.html">Story Sounds</a></h3>
+            <p>Soundscapes and effects to make storytime extra magical.</p>
+          </li>
+          <li>
+            <h3><a href="quiz.html">Alphy’s Quiz</a></h3>
+            <p>Quick, kid-friendly questions to learn and laugh.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">Meet the Author</h2>
-      <p>Hi! I’m Abdirizak, and I created Alphy to help kids learn through joy, storytelling, and imagination. Every book is crafted with love and cultural care.</p>
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading" class="section">
+      <div class="container">
+        <h2 id="about-heading">Meet the Author</h2>
+        <p>Hi! I’m Abdirizak, and I created Alphy to help kids learn through joy, storytelling, and imagination. Every book is crafted with love and cultural care.</p>
+      </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Say Hello</h2>
-      <form action="submit-form.php" method="POST" aria-describedby="form-instructions">
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading" class="section alt">
+      <div class="container">
+        <h2 id="contact-heading">Say Hello</h2>
         <p id="form-instructions">Send us a message and join Alphy’s adventure club!</p>
 
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required />
+        <form class="contact-form" action="submit-form.php" method="POST" aria-describedby="form-instructions" novalidate>
+          <!-- Honeypot -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true" />
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required />
+          <div class="form-row">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="form-row">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
 
-        <button type="submit">Send</button>
-      </form>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Send</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p>&copy; 2025 Alphy’s Adventure. All rights reserved.</p>
+  <footer role="contentinfo" class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Alphy’s Adventure. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#books">Books</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
+
+  <noscript>
+    <p style="text-align:center;margin:1rem 0;">For the best experience, please enable JavaScript.</p>
+  </noscript>
+
+  <!-- Lightweight enhancements -->
+  <script>
+    // Mobile nav toggle
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-nav');
+      if (!btn || !nav) return;
+
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    })();
+
+    // Smooth scroll for internal links
+    (function () {
+      const links = document.querySelectorAll('a[href^="#"]');
+      for (const link of links) {
+        link.addEventListener('click', function (e) {
+          const id = this.getAttribute('href');
+          const target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile nav after selection
+          const nav = document.getElementById('site-nav');
+          const btn = document.querySelector('.nav-toggle');
+          if (nav && nav.classList.contains('open') && btn) {
+            nav.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+
+    // Tiny client-side form validation hint
+    (function () {
+      const form = document.querySelector('.contact-form');
+      if (!form) return;
+      const status = form.querySelector('.form-status');
+      form.addEventListener('submit', function (e) {
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const msg = form.message.value.trim();
+        if (!name || !email || !msg) {
+          e.preventDefault();
+          if (status) status.textContent = 'Please complete all fields.';
+        }
+      });
+    })();
+  </script>
+
+  <!-- Structured data (basic site/brand) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Alphy’s Adventure",
+    "url": "https://alphyadventure.com/",
+    "sameAs": []
+  }
+  </script>
 </body>
 </html>
