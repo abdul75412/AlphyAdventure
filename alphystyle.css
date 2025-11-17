@@ -353,4 +353,22 @@ input:focus, textarea:focus {
   }
 }
 
+/* Hero image above brand title */
+.hero-logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
