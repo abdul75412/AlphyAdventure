@@ -1,151 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alphy’s Adventure - Books</title>
+  <title>Books — Alphy’s Adventure</title>
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Explore Alphy’s books for kids — fun stories that teach math, English, geography, and kindness through adventure!" />
+  <meta property="og:title" content="Books — Alphy’s Adventure">
+  <meta property="og:description" content="Join Alphy in exciting storybook adventures that spark imagination and learning!">
+  <meta property="og:image" content="https://alphyadventure.com/Alphy.png">
+  <meta property="og:url" content="https://alphyadventure.com/books.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://alphyadventure.com/books.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka+One&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="alphystyle.css" />
-  <style>
-    /* === Page-specific layout tweaks === */
-    body {
-      background-color: #fffdf8;
-      font-family: 'Comic Neue', cursive, sans-serif;
-      color: #333;
-      text-align: center;
-    }
-
-    header {
-      background: linear-gradient(120deg, #72c180, #a3e4c2);
-      padding: 2rem 1rem;
-      color: #fff;
-    }
-
-    header h1 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      background: #fdf5a3;
-      padding: 0.75rem;
-      border-radius: 1rem;
-      margin: 1rem auto 2rem;
-      width: fit-content;
-    }
-
-    nav a {
-      color: #00704a;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #009e68;
-    }
-
-    /* Books layout — vertical stack */
-    .books-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      max-width: 600px;
-      margin: 0 auto 4rem;
-    }
-
-    .book-card {
-      background: #fff;
-      border-radius: 1rem;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      padding: 1rem;
-      transition: transform 0.3s;
-    }
-
-    .book-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .book-card img {
-      width: 150px;
-      height: auto;
-      margin: 0.5rem auto 1rem;
-      border-radius: 0.5rem;
-      display: block;
-    }
-
-    .book-card h2 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.4rem;
-      color: #00704a;
-      margin-bottom: 0.4rem;
-    }
-
-    .book-card p {
-      font-size: 1rem;
-      padding: 0 1rem;
-      color: #333;
-    }
-
-    footer {
-      background: linear-gradient(120deg, #72c180, #a3e4c2);
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem 0;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="icon" href="/favicon.ico" />
 </head>
 
 <body>
-  <header>
-    <h1>Alphy’s Books</h1>
-    <p>Explore the fun stories we’ve created!</p>
+  <!-- Header -->
+  <header class="storybook-header" role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:1rem;">
+      <a class="logo-link" href="index.html" aria-label="Alphy’s Adventure home" style="display:flex;align-items:center;gap:0.75rem;">
+        <span class="logo-text">Alphy’s Adventure</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="site-nav" class="main-nav" aria-label="Main navigation" style="margin-left:auto;">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html" aria-current="page">Books</a></li>
+          <li><a href="activities.html">Play &amp; Learn</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav aria-label="Main navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="books.html">Books</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="activities.html">Play &amp; Learn</a></li>
-      <li><a href="#about">About the Author</a></li>
-    </ul>
-  </nav>
+  <!-- Hero banner -->
+  <section class="hero" style="background: linear-gradient(180deg, #a3e4c2 0%, #d8f8e1 100%); padding:4rem 1rem;">
+    <div class="container">
+      <img src="Alphy.png" alt="Alphy the Explorer" class="hero-logo" width="150" height="150" loading="eager" decoding="async" />
+      <h1 class="hero-brand">Alphy’s Books</h1>
+      <p class="hero-subtitle">Explore fun, story-driven adventures that help kids learn and grow with Alphy!</p>
+    </div>
+  </section>
 
-  <main>
-    <section class="books-container">
-  <div class="book-card english">
-    <img src="abook.png" alt="English Book" class="book-icon">
-    <h2>English</h2>
-    <p>Learn letters, words, and rhymes with Alphy!</p>
-  </div>
+  <!-- Books Section -->
+  <main class="section alt" id="main">
+    <div class="container">
+      <section class="books-container" aria-labelledby="books-heading">
+        <h2 id="books-heading">Our Story Collection</h2>
+        <p style="text-align:center;max-width:650px;margin:0 auto 2rem;">
+          Each book is crafted with imagination, love, and life lessons — making learning fun for every young explorer!
+        </p>
 
-  <div class="book-card math">
-    <img src="math1.png" alt="Math Book" class="book-icon">
-    <h2>Math</h2>
-    <p>Counting, numbers, and fun math games for kids.</p>
-  </div>
+        <div class="book-card english">
+          <img src="abook.png" alt="English learning with Alphy" class="book-icon" width="120" height="120" loading="lazy" decoding="async" />
+          <h2>English</h2>
+          <p>Learn letters, words, and rhymes with Alphy’s cheerful adventures that inspire language confidence!</p>
+        </div>
 
-  <div class="book-card geography">
-    <img src="geography.png" alt="Geography Book" class="book-icon">
-    <h2>Geography</h2>
-    <p>Explore countries, maps, and fun world facts.</p>
-  </div>
-</section>
+        <div class="book-card math">
+          <img src="math1.png" alt="Math adventures with Alphy" class="book-icon" width="120" height="120" loading="lazy" decoding="async" />
+          <h2>Math</h2>
+          <p>Discover numbers, counting, and puzzles that make math an exciting adventure with Alphy!</p>
+        </div>
+
+        <div class="book-card geography">
+          <img src="geography.png" alt="Geography adventures with Alphy" class="book-icon" width="120" height="120" loading="lazy" decoding="async" />
+          <h2>Geography</h2>
+          <p>Travel the world with Alphy — exploring countries, cultures, and new discoveries around the globe!</p>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Alphy’s Adventure. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Alphy’s Adventure. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html" aria-current="page">Books</a></li>
+          <li><a href="activities.html">Play & Learn</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-nav');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
-
-
