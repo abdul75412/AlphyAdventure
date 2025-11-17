@@ -239,22 +239,65 @@ a:hover {
 }
 
 .feature-list li {
+  position: relative;
   flex: 1 1 250px;
   background: #fff;
   border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-list li:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
 }
 
-.feature-list a {
-  color: #00704a;
-  font-size: 1.1rem;
-  font-weight: bold;
+/* Activity icons */
+.activity-icon {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.75rem;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.feature-list li:hover .activity-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* Magical glow per activity */
+.feature-list li:nth-child(1):hover .activity-icon { filter: drop-shadow(0 0 10px #ff884d); } /* Coloring (orange) */
+.feature-list li:nth-child(2):hover .activity-icon { filter: drop-shadow(0 0 10px #57d6c2); } /* Sounds (teal) */
+.feature-list li:nth-child(3):hover .activity-icon { filter: drop-shadow(0 0 10px #ffcc4d); } /* Quiz (yellow) */
+.feature-list li:nth-child(4):hover .activity-icon { filter: drop-shadow(0 0 10px #70d26e); } /* Puzzle (green) */
+.feature-list li:nth-child(5):hover .activity-icon { filter: drop-shadow(0 0 10px #6ec3ff); } /* Word Builder (blue) */
+.feature-list li:nth-child(6):hover .activity-icon { filter: drop-shadow(0 0 10px #c7e85a); } /* Memory Match (lime) */
+
+/* Gentle sparkle effect */
+.feature-list li::after {
+  content: "✨";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-list li:hover::after {
+  opacity: 1;
+}
+
+/* Wiggle animation for fun */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+.feature-list li:hover .activity-icon {
+  animation: wiggle 0.4s ease-in-out;
 }
 
 /* ================================
@@ -367,125 +410,8 @@ textarea:focus {
   .hero-brand {
     font-size: 2.2rem;
   }
-}
-/* ================================
-   Contact Page Enhancements
-   ================================ */
 
-.contact-hero {
-  background: linear-gradient(180deg, #a3e4c2 0%, #d8f8e1 100%);
-  padding: 4rem 1rem 3rem;
-  text-align: center;
-}
-
-.contact-hero .hero-logo {
-  width: clamp(100px, 12vw, 160px);
-  margin-bottom: 1rem;
-}
-
-.contact-form.enhanced-form {
-  background: #fff;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  max-width: 600px;
-  margin: 0 auto;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.contact-form.enhanced-form label {
-  color: #064420;
-}
-
-.contact-form.enhanced-form input,
-.contact-form.enhanced-form textarea {
-  border: 2px solid #a3e4c2;
-  border-radius: 0.5rem;
-  padding: 0.7rem;
-  font-size: 1rem;
-  width: 100%;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contact-form.enhanced-form input:focus,
-.contact-form.enhanced-form textarea:focus {
-  border-color: #00704a;
-  box-shadow: 0 0 6px rgba(0, 112, 74, 0.3);
-}
-
-.contact-form.enhanced-form button {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive tweak */
-@media (max-width: 768px) {
-  .contact-hero {
-    padding: 3rem 1rem 2rem;
-  }
-
-  .contact-form.enhanced-form {
-    padding: 1.5rem;
-  }
-}
-
-/* ================================
-   Activities Page Enhancements
-   ================================ */
-
-.activity-icon {
-  width: 120px;
-  height: auto;
-  display: block;
-  margin: 0 auto 0.75rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-@media (max-width: 768px) {
   .activity-icon {
     width: 90px;
   }
 }
-
-/* Optional hover effect (keep it soft and subtle) */
-.feature-list li:hover .activity-icon {
-  transform: scale(1.05);
-  opacity: 1;
-}
-
-/* Add a small sparkle hover effect */
-.feature-list li::after {
-  content: "✨";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.feature-list li:hover::after {
-  opacity: 1;
-}
-/* Magical glow per activity */
-.feature-list li:nth-child(1):hover .activity-icon { filter: drop-shadow(0 0 8px #ff884d); } /* Coloring (orange) */
-.feature-list li:nth-child(2):hover .activity-icon { filter: drop-shadow(0 0 8px #57d6c2); } /* Sounds (teal) */
-.feature-list li:nth-child(3):hover .activity-icon { filter: drop-shadow(0 0 8px #ffcc4d); } /* Quiz (yellow) */
-.feature-list li:nth-child(4):hover .activity-icon { filter: drop-shadow(0 0 8px #70d26e); } /* Puzzle (green) */
-.feature-list li:nth-child(5):hover .activity-icon { filter: drop-shadow(0 0 8px #6ec3ff); } /* Word Builder (blue) */
-.feature-list li:nth-child(6):hover .activity-icon { filter: drop-shadow(0 0 8px #c7e85a); } /* Memory Match (lime) */
-
-.feature-list li {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-  padding: 1.2rem;
-  max-width: 300px;
-}
-
-
-
