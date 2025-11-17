@@ -16,9 +16,13 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="canonical" href="https://alphyadventure.com/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka+One&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka+One&display=swap" rel="stylesheet" />
+
+<!-- ✅ Preload hero image -->
+<link rel="preload" as="image" href="Alphy.webp" type="image/webp">
+
 
   <link rel="stylesheet" href="alphystyle.css" />
   <link rel="icon" href="/favicon.ico" />
@@ -57,8 +61,12 @@
   <section class="hero">
     <div class="container">
       <!-- ✅ Step 2: add width/height + eager -->
-      <img src="Alphy.png" alt="Alphy the Explorer" class="hero-logo"
-           width="150" height="150" loading="eager" decoding="async">
+<picture>
+  <source srcset="Alphy.avif" type="image/avif">
+  <source srcset="Alphy.webp" type="image/webp">
+  <img src="Alphy.png" alt="Alphy the Explorer" class="hero-logo"
+       width="150" height="150" loading="eager" decoding="async">
+</picture>
 
       <h1 class="hero-brand">Alphy’s Adventure</h1>
       <h2 class="hero-title">Discover, giggle, and learn with <span class="nowrap">Alphy the Explorer!</span></h2>
@@ -82,9 +90,13 @@
         <ul class="card-grid">
           <!-- Math -->
           <li class="card" id="book-math">
-            <img src="math1.png" alt="Math adventures with Alphy"
-                 width="600" height="180" loading="lazy" decoding="async"
-                 style="width:100%;height:180px;object-fit:cover;">
+            <picture>
+  <source srcset="Alphy.avif" type="image/avif">
+  <source srcset="Alphy.webp" type="image/webp">
+  <img src="Alphy.png" alt="Alphy the Explorer" class="hero-logo"
+       width="150" height="150" loading="eager" decoding="async">
+</picture>
+
             <div class="card-body">
               <h3 class="card-title">Math Adventures</h3>
               <p class="card-text">Count, add, and explore numbers with Alphy’s playful puzzles.</p>
@@ -94,10 +106,13 @@
 
           <!-- Geography -->
           <li class="card" id="book-geography">
-            <img src="geography.png" alt="Geography journeys with Alphy"
-                 width="600" height="180" loading="lazy" decoding="async"
-                 style="width:100%;height:180px;object-fit:cover;">
-            <div class="card-body">
+            <picture>
+  <source srcset="geography.avif" type="image/avif">
+  <source srcset="geography.webp" type="image/webp">
+  <img src="geography.png" alt="Geography journeys with Alphy"
+       width="600" height="180" loading="lazy" decoding="async"
+       style="width:100%;height:180px;object-fit:cover;">
+</picture>
               <h3 class="card-title">Geography Journeys</h3>
               <p class="card-text">Maps, places, and friendly faces from around the world.</p>
               <a class="btn btn-link" href="books.html#geography">Read more</a>
@@ -106,10 +121,13 @@
 
           <!-- English -->
           <li class="card" id="book-english">
-            <img src="abook.png" alt="English reading with Alphy"
-                 width="600" height="180" loading="lazy" decoding="async"
-                 style="width:100%;height:180px;object-fit:cover;">
-            <div class="card-body">
+           <picture>
+  <source srcset="abook.avif" type="image/avif">
+  <source srcset="abook.webp" type="image/webp">
+  <img src="abook.png" alt="English reading with Alphy"
+       width="600" height="180" loading="lazy" decoding="async"
+       style="width:100%;height:180px;object-fit:cover;">
+</picture>
               <h3 class="card-title">English Stories</h3>
               <p class="card-text">Letters, words, and warm tales that build confidence.</p>
               <a class="btn btn-link" href="books.html#english">Read more</a>
@@ -211,5 +229,6 @@
   </script>
 </body>
 </html>
+
 
 
