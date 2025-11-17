@@ -415,3 +415,75 @@ textarea:focus {
     width: 90px;
   }
 }
+/* ================================
+   Books Page Enhancements
+   ================================ */
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.book-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-icon {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.book-card:hover .book-icon {
+  transform: scale(1.08);
+}
+
+/* Subject colors */
+.book-card.english h2 { color: #00704a; }
+.book-card.math h2 { color: #f98f00; }
+.book-card.geography h2 { color: #1b9aaa; }
+
+/* Glow effects per subject */
+.book-card.english:hover .book-icon { filter: drop-shadow(0 0 8px #72c180); }
+.book-card.math:hover .book-icon { filter: drop-shadow(0 0 8px #ffb84d); }
+.book-card.geography:hover .book-icon { filter: drop-shadow(0 0 8px #4fc3dc); }
+
+/* Animation (wiggle for fun) */
+@keyframes book-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+.book-card:hover .book-icon {
+  animation: book-wiggle 0.4s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-card {
+    padding: 1.5rem;
+  }
+  .book-icon {
+    width: 90px;
+  }
+}
+
