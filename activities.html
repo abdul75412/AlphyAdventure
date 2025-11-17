@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play & Learn | Alphy’s Adventure</title>
+  <meta name="description" content="Play and learn with Alphy! Enjoy coloring, sounds, quizzes, and fun games that make learning magical.">
+  <link rel="stylesheet" href="alphystyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="storybook-header" role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:1rem;">
+      <a class="logo-link" href="index.html" aria-label="Alphy’s Adventure home" style="display:flex;align-items:center;gap:0.75rem;">
+        <span class="logo-text">Alphy’s Adventure</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="site-nav" class="main-nav" aria-label="Main navigation" style="margin-left:auto;">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="activities.html" class="active">Play & Learn</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero banner -->
+  <section class="hero" style="background: linear-gradient(180deg, #a3e4c2 0%, #d8f8e1 100%); padding:4rem 1rem;">
+    <div class="container">
+      <img src="Alphy.png" alt="Alphy the Explorer" class="hero-logo">
+      <h1 class="hero-brand">Play & Learn</h1>
+      <p class="hero-subtitle">Fun activities that help little adventurers grow smarter, kinder, and more curious!</p>
+    </div>
+  </section>
+
+  <main class="section alt">
+    <div class="container">
+      <section id="activities" aria-labelledby="activities-heading">
+        <h2 id="activities-heading">Choose an Adventure!</h2>
+        <p style="text-align:center;max-width:650px;margin:0 auto 2rem;">
+          Explore games and creative challenges with Alphy. Every activity is made to inspire imagination and joyful learning!
+        </p>
+
+        <ul class="feature-list">
+          <li>
+            <img src="images/coloring.png" alt="Coloring Pages" style="width:100px;height:100px;margin-bottom:0.5rem;">
+            <h3><a href="coloring.html">Coloring Pages</a></h3>
+            <p>Grab your crayons! Bring Alphy’s adventures to life with fun coloring sheets.</p>
+          </li>
+
+          <li>
+            <img src="images/sounds.png" alt="Story Sounds" style="width:100px;height:100px;margin-bottom:0.5rem;">
+            <h3><a href="sounds.html">Story Sounds</a></h3>
+            <p>Listen to giggles, roars, and whispers from Alphy’s world — perfect for storytime!</p>
+          </li>
+
+          <li>
+            <img src="images/quiz.png" alt="Alphy’s Quiz" style="width:100px;height:100px;margin-bottom:0.5rem;">
+            <h3><a href="quiz.html">Alphy’s Quiz</a></h3>
+            <p>Can you beat Alphy’s quiz? Test your smarts with silly and fun questions!</p>
+          </li>
+
+          <li>
+            <img src="images/puzzle.png" alt="Puzzle Time" style="width:100px;height:100px;margin-bottom:0.5rem;">
+            <h3><a href="#">Puzzle Time</a></h3>
+            <p>Match shapes, find hidden paths, and solve mini riddles with Alphy!</p>
+          </li>
+
+          <li>
+            <img src="images/word-builder.png" alt="Word Builder" style="width:100px;height:100px;margin-bottom:0.5rem;">
+            <h3><a href="#">Word Builder</a></h3>
+            <p>Build simple words and learn letters through laughter and games.</p>
+          </li>
+
+          <li>
+            <img src="images/memory.png" alt="Memory Match" style="width:100px;height:100px;margin-bottom:0.5rem;">
+            <h3><a href="#">Memory Match</a></h3>
+            <p>Flip the cards and find Alphy’s friends — can you remember where they are?</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Alphy’s Adventure. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="activities.html">Play & Learn</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-nav');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
 
