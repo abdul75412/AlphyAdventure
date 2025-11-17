@@ -438,23 +438,24 @@ textarea:focus {
    Activities Page Enhancements
    ================================ */
 
-.feature-list li {
-  position: relative;
-  transition: transform 0.3s, background 0.3s;
-  cursor: pointer;
+.activity-icon {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.75rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.feature-list li:hover {
-  transform: translateY(-6px) scale(1.03);
-  background: #fdf5a3;
+@media (max-width: 768px) {
+  .activity-icon {
+    width: 90px;
+  }
 }
 
-.feature-list img {
-  transition: transform 0.3s ease;
-}
-
-.feature-list li:hover img {
-  transform: rotate(-5deg) scale(1.05);
+/* Optional hover effect (keep it soft and subtle) */
+.feature-list li:hover .activity-icon {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 /* Add a small sparkle hover effect */
@@ -477,6 +478,7 @@ textarea:focus {
 .feature-list li:nth-child(4):hover .activity-icon { filter: drop-shadow(0 0 8px #70d26e); } /* Puzzle (green) */
 .feature-list li:nth-child(5):hover .activity-icon { filter: drop-shadow(0 0 8px #6ec3ff); } /* Word Builder (blue) */
 .feature-list li:nth-child(6):hover .activity-icon { filter: drop-shadow(0 0 8px #c7e85a); } /* Memory Match (lime) */
+
 
 
 
