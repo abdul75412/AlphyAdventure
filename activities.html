@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Play & Learn — Alphy’s Adventure</title>
-<meta name="description" content="Play and learn with Alphy! Try coloring pages, quizzes, and sounds for kids — fun, friendly, and full of imagination." />
-<meta property="og:title" content="Play & Learn — Alphy’s Adventure">
-<meta property="og:description" content="Join Alphy in creative games, sounds, and quizzes that make learning fun.">
-<meta property="og:image" content="https://alphyadventure.com/Alphy.png">
-<meta property="og:url" content="https://alphyadventure.com/activities.html">
-<meta name="twitter:card" content="summary_large_image">
 
+  <!-- SEO & Social -->
+  <meta name="description" content="Play and learn with Alphy! Try coloring pages, quizzes, and sounds for kids — fun, friendly, and full of imagination." />
+  <meta property="og:title" content="Play & Learn — Alphy’s Adventure">
+  <meta property="og:description" content="Join Alphy in creative games, sounds, and quizzes that make learning fun.">
+  <meta property="og:image" content="https://alphyadventure.com/Alphy.png">
+  <meta property="og:url" content="https://alphyadventure.com/activities.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://alphyadventure.com/activities.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka+One&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="alphystyle.css" />
+  <link rel="icon" href="/favicon.ico" />
 </head>
 
 <body>
@@ -29,9 +40,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="books.html">Books</a></li>
-          <li><a href="activities.html" class="active">Play & Learn</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="activities.html" aria-current="page">Play &amp; Learn</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -40,14 +50,14 @@
   <!-- Hero banner -->
   <section class="hero" style="background: linear-gradient(180deg, #a3e4c2 0%, #d8f8e1 100%); padding:4rem 1rem;">
     <div class="container">
-      <img src="Alphy.png" alt="Alphy the Explorer" class="hero-logo" />
+      <img src="Alphy.png" alt="Alphy the Explorer" class="hero-logo" width="150" height="150" loading="eager" decoding="async" />
       <h1 class="hero-brand">Play & Learn</h1>
       <p class="hero-subtitle">Fun activities that help little adventurers grow smarter, kinder, and more curious!</p>
     </div>
   </section>
 
   <!-- Main content -->
-  <main class="section alt">
+  <main class="section alt" id="main">
     <div class="container">
       <section id="activities" aria-labelledby="activities-heading">
         <h2 id="activities-heading">Choose an Adventure!</h2>
@@ -57,13 +67,13 @@
 
         <ul class="feature-list">
           <li>
-            <img src="AlphyCrayon.png" alt="Alphy coloring icon" class="activity-icon">
+            <img src="AlphyCrayon.png" alt="Alphy coloring activity icon" class="activity-icon">
             <h3><a href="coloring.html">Coloring Pages</a></h3>
             <p>Grab your crayons and bring Alphy’s adventures to life with fun, printable coloring sheets!</p>
           </li>
 
           <li>
-            <img src="AlphyMusic.png" alt="Alphy music icon" class="activity-icon">
+            <img src="AlphyMusic.png" alt="Alphy listening to sounds icon" class="activity-icon">
             <h3><a href="sounds.html">Story Sounds</a></h3>
             <p>Listen to giggles, roars, and magical story sounds straight from Alphy’s jungle world!</p>
           </li>
@@ -75,19 +85,19 @@
           </li>
 
           <li>
-            <img src="AlphyPuzzle.png" alt="Alphy puzzle icon" class="activity-icon">
+            <img src="AlphyPuzzle.png" alt="Alphy puzzle activity icon" class="activity-icon">
             <h3><a href="#">Puzzle Time</a></h3>
             <p>Fit pieces together, find hidden shapes, and solve fun puzzles with Alphy!</p>
           </li>
 
           <li>
-            <img src="AlphyWB.png" alt="Alphy word builder icon" class="activity-icon">
+            <img src="AlphyWB.png" alt="Alphy word building activity icon" class="activity-icon">
             <h3><a href="#">Word Building</a></h3>
             <p>Help Alphy spell and learn new words through exciting word-building games!</p>
           </li>
 
           <li>
-            <img src="AlphyMM.png" alt="Alphy memory match icon" class="activity-icon">
+            <img src="AlphyMM.png" alt="Alphy memory match activity icon" class="activity-icon">
             <h3><a href="#">Memory Match</a></h3>
             <p>Flip the cards and find matching pairs — how fast can you match all of Alphy’s friends?</p>
           </li>
@@ -104,7 +114,7 @@
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="books.html">Books</a></li>
-          <li><a href="activities.html">Play & Learn</a></li>
+          <li><a href="activities.html" aria-current="page">Play &amp; Learn</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
