@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphy Adventure - Books</title>
-    <link rel="stylesheet" href="alphystyle.css">
-</head>
-<body>
-    <header>
-        <h1>Alphy's Books</h1>
-        <p>Explore the fun books we've created!</p>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alphy’s Adventure - Books</title>
+  <link rel="stylesheet" href="alphystyle.css" />
+  <style>
+    /* === Page-specific layout tweaks === */
+    body {
+      background-color: #fffdf8;
+      font-family: 'Comic Neue', cursive, sans-serif;
+      color: #333;
+      text-align: center;
+    }
 
-    <nav aria-label="Main navigation">
+    header {
+      background: linear-gradient(120deg, #72c180, #a3e4c2);
+      padding: 2rem 1rem;
+      color: #fff;
+    }
+
+    header h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      background: #fdf5a3;
+      padding: 0.75rem;
+      border-radius: 1rem;
+      margin: 1rem auto 2rem;
+      width: fit-content;
+    }
+
+    nav a {
+      color: #00704a;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #009e68;
+    }
+
+    /* Books layout — vertical stack */
+    .books-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .book-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .book-card img {
+      width: 150px;
+      height: auto;
+      margin: 0.5rem auto 1rem;
+      border-radius: 0.5rem;
+      display: block;
+    }
+
+    .book-card h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.4rem;
+      color: #00704a;
+      margin-bottom: 0.4rem;
+    }
+
+    .book-card p {
+      font-size: 1rem;
+      padding: 0 1rem;
+      color: #333;
+    }
+
+    footer {
+      background: linear-gradient(120deg, #72c180, #a3e4c2);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Alphy’s Books</h1>
+    <p>Explore the fun stories we’ve created!</p>
+  </header>
+
+  <nav aria-label="Main navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="#activities">Activities</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="#about">About the Author</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-    <main>
-        <section class="books-container">
-            <div class="book-card">
-                <img src="abook.png" alt="English Book">
-                <h2>English</h2>
-                <p>Learn letters, words, and rhymes with Alphy!</p>
-            </div>
+  <main>
+    <section class="books-container">
+      <div class="book-card">
+        <img src="abook.png" alt="English Book">
+        <h2>English</h2>
+        <p>Learn letters, words, and rhymes with Alphy!</p>
+      </div>
 
-            <div class="book-card">
-                <img src="math1.png" alt="Math Book">
-                <h2>Math</h2>
-                <p>Counting, numbers, and fun math games for kids.</p>
-            </div>
+      <div class="book-card">
+        <img src="math1.png" alt="Math Book">
+        <h2>Math</h2>
+        <p>Counting, numbers, and fun math games for kids.</p>
+      </div>
 
-            <div class="book-card">
-                <img src="geography.png" alt="Geography Book">
-                <h2>Geography</h2>
-                <p>Explore countries, maps, and fun world facts.</p>
-            </div>
+      <div class="book-card">
+        <img src="geography.png" alt="Geography Book">
+        <h2>Geography</h2>
+        <p>Explore countries, maps, and fun world facts.</p>
+      </div>
+    </section>
+  </main>
 
-            <!-- Add more book cards here as needed -->
-        </section>
-    </main>
+  <footer>
+    <p>&copy; 2025 Alphy’s Adventure. All rights reserved.</p>
+  </footer>
 </body>
 </html>
