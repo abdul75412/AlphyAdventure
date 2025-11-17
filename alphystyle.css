@@ -338,3 +338,19 @@ input:focus, textarea:focus {
     font-size: 1.9rem;
   }
 }
+/* Big brand title above hero tagline */
+.hero-brand {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  color: #064420;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero-brand {
+    font-size: 2.2rem;
+  }
+}
+
+
