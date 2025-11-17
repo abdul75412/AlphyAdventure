@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://alphyadventure.com/sitemap.xml
